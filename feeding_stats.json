@@ -1,0 +1,85 @@
+{
+	"name": "MyDude",
+	"feedings": [
+		{
+			"date": "2018-08-12",
+			"time": "1030",
+			"attempt": "success",
+			"food": "big pinky",
+			"foodAlias": "bp",
+			"timeToStrike": "instantly",
+			"timeToIngest": "~5min",
+			"substrate": "aspen",
+			"enclosure": "16G plastic",
+			"temp": "~86F"
+		},
+		{
+			"date": "2018-08-19",
+			"time": "1115",
+			"attempt": "success",
+			"food": "big pinky",
+			"foodAlias": "bp",
+			"timeToStrike": "slowbite_to_strike",
+			"timeToIngest": "~10min",
+			"substrate": "aspen",
+			"enclosure": "16G plastic",
+			"temp": "~86F"
+		},
+		{
+			"date": "2018-08-27",
+			"time": "2036",
+			"attempt": "success",
+			"food": "big pinky",
+			"foodAlias": "bp",
+			"timeToStrike": "instantly",
+			"timeToIngest": "~10min",
+			"substrate": "aspen",
+			"enclosure": "16G plastic",
+			"temp": "~90F"
+		},
+		{
+			"date": "2018-09-05",
+			"substrate": "aspen",
+			"enclosure": "16G plastic",
+			"attempt": "success",
+			"food": "big pinky",
+			"foodAlias": "bp"
+		},
+		{
+			"date": "2018-09-13",
+			"time": "~2000",
+			"attempt": "success",
+			"food": "big pinky",
+			"foodAlias": "bp",
+			"timeToStrike": "instantly",
+			"timeToIngest": "~10min",
+			"substrate": "aspen",
+			"enclosure": "16G plastic",
+			"temp": "~90F"
+		},
+		{
+			"date": "2018-10-09",
+			"time": "~2000",
+			"attempt": "success",
+			"food": "fuzzy",
+			"foodAlias": "fuzzy",
+			"timeToStrike": "null",
+			"timeToIngest": "~10min",
+			"substrate": "aspen",
+			"enclosure": "10G glass",
+			"temp": "~90F"
+		},
+		{
+			"date": "2018-10-21",
+			"time": "~1500",
+			"attempt": "success",
+			"food": "fuzzy",
+			"foodAlias": "fuzzy",
+			"timeToStrike": "null",
+			"timeToIngest": "UNKNOWN",
+			"substrate": "aspen",
+			"enclosure": "10G glass",
+			"temp": "~92F"
+		}
+	]
+}

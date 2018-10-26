@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>Snake Stats</title>
+
+        <!-- <script type="text/javascript" src="ui/libs/jquery-3.3.1.min.js"></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>Snake Stats</h1>
+        <form id="feedingStatsForm">
+            <span>Name:</span>
+            <input name="feedName" type="text">
+            <br/>
+            <span>Date:</span>
+            <input name="feedDate" type="text">
+            <br/>
+            <span>Time:</span>
+            <input name="feedTime" type="text">
+            <br/>
+            <span>Food:</span>
+            <input name="feedFood" type="text">
+            <br/>
+            <span>Substrate:</span>
+            <input name="feedSubstrate" type="text">
+            <br/>
+            <span>Enclosure:</span>
+            <input name="feedEnclosure" type="text">
+            <br/>
+            <span>Temperature(F):</span>
+            <input name="feedTemp" type="text">
+            <br/>
+            <br/>
+            <input type="submit" value="Submit">
+        </form>
+
+        <h2>Data</h2>
+        <table border="1px">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Date</td>
+                    <td>Food</td>
+                    <td>Substrate</td>
+                    <td>Enclosure</td>
+                    <td>Temperature(F)</td>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    <div id=errorBanner hidden>
+        <span>Error</span>
+    </div>
+    </body>
+</html>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $.ajax({
+            type: 'GET',
+            url: "/feeding_stats",
+            success: function(data){
+                // do something with the received data
+                $('#errorBanner').hide();
+            },
+            error: function(request, status, error) {
+                var message = "/feeding_stats failure"
+                console.log(message);
+                $('#errorBanner span').text("Error: " + error);
+                $('#errorBanner').show();
+            }
+        });
+    });
+
+    $('#feedingStatsForm').submit(function(event) {
+        event.preventDefault();
+
+        var statsArray = $('#feedingStatsForm').serializeArray();
+
+        // API call
+        $.ajax({
+            type: 'POST',
+            url: "/feeding_stats",
+            data: JSON.stringify(statsArray),
+            contentType: 'application/json',
+            success: function(data){
+                // do something with the received data
+                $('#errorBanner').hide();
+            },
+            error: function(request, status, error) {
+                $('#errorBanner span').text("Error: " + error);
+                $('#errorBanner').show();
+            }
+        });
+    });
+</script>
