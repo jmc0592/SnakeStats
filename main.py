@@ -39,7 +39,7 @@ def feeding_stats():
 
     elif request.method == 'GET':
         if config.stubApi:
-                return jsonify({"message": "Stub" "feedName" : "MyDude", "feedDate" : "2018-11-02", "feedTime" : "2240", "feedFood" : "fuzzy", "feedSubstrate" : "aspen", "feedEnclosure" : "10G glass", "feedTemp" : "90" })
+                return jsonify({"message": "Stub", "feedName" : "MyDude", "feedDate" : "2018-11-02", "feedTime" : "2240", "feedFood" : "fuzzy", "feedSubstrate" : "aspen", "feedEnclosure" : "10G glass", "feedTemp" : "90" })
         if config.debug:
             print(request.args)
 
