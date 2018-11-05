@@ -3,3 +3,5 @@ mongodb = {"server" : "localhost",
            "name" : "snake_stats"}
 
 debug = True
+
+stubApi = True

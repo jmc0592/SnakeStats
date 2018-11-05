@@ -23,6 +23,8 @@ def index():
 @app.route('/feeding_stats', methods=['POST', 'GET'])
 def feeding_stats():
     if request.method == 'POST':
+        if config.stubApi:
+            return jsonify({'result': 1, 'message': 'Stub'})
         requestData = request.data.decode()
         if config.debug:
             print(requestData)
@@ -36,6 +38,8 @@ def feeding_stats():
         return jsonify({'result': 0, 'message': 'Data added successfully'})
 
     elif request.method == 'GET':
+        if config.stubApi:
+                return jsonify({"message": "Stub" "feedName" : "MyDude", "feedDate" : "2018-11-02", "feedTime" : "2240", "feedFood" : "fuzzy", "feedSubstrate" : "aspen", "feedEnclosure" : "10G glass", "feedTemp" : "90" })
         if config.debug:
             print(request.args)
 
